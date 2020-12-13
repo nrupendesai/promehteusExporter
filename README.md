@@ -17,15 +17,30 @@ Follow below steps to run service after you clone the repo
 ----------------------------------------------------------
 
 1. Install node modules
+
     cd <repo directory path>
+    
     npm i
+    
 2. setup above environment variable to access your k8 cluster as below.
+    
     export M_INTERVAL = 15000
+    
     export K8_BASE_URL = "<K8-cluster-api-endpoint>" (replace <K8-cluster-api-endpoint> with your kubernetes cluster endpoint)
+    
     export AUTH_TOKEN= "<auth-token-received-from-k8-for-authentication>" (replace <auth-token-received-from-k8-for-authentication> with your auth token)
-3. npm start
-    Note: metrics will be scapred at <server-info/ip>:3000/metrics
+    
+3. start Web server
+
+    npm start
+
+    Note: metrics will be scapred at <server-ip>:3000/metrics
+    
+    You can access the application end point at <server-ip>:3000/
 
 4. Use Grafana and Prometheus to view the information for
+
     pod_count
+    
     api_access_count
+    
